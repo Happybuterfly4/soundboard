@@ -49,7 +49,7 @@ function renderSounds(filter = '') {
                 currentAudios.forEach(a => a.pause());
                 currentAudios = [];
             }
-            const audio = new Audio("https://cdn.jsdelivr.net/gh/genizy/soundboard@main/"+sound.mp3);
+            const audio = new Audio("https://cdn.jsdelivr.net/gh/Happybuterfly4/soundboard/"+sound.mp3);
             audio.play();
             currentAudios.push(audio);
             image.classList.add('pressed');
@@ -106,7 +106,7 @@ function rightClickPanel(event, button, sound) {
     
     download.onclick = () => {
         const link = document.createElement('a');
-        link.href = 'https://cdn.jsdelivr.net/gh/genizy/soundboard@main/'+sound.mp3;
+        link.href = 'https://cdn.jsdelivr.net/gh/Happybuterfly4/soundboard/sound.mp3;
         link.download = sound.mp3.split("/").pop();
         document.body.appendChild(link);
         link.click();
@@ -129,3 +129,4 @@ function rightClickPanel(event, button, sound) {
         document.addEventListener('click', handleOutsideClick);
     }, 0);
 }
+
